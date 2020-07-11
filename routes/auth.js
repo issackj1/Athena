@@ -9,6 +9,6 @@ router.post('/api/login', passport.authenticate('local', { session: false }), au
 
 router.post('/api/register', auth.register);
 
-router.post('/api/confirm-token/:token', passport.authenticate('local', { session: false }), auth.confirmToken);
+router.post('/api/confirm-token/:token?', passport.authenticate('jwt', { session: false }), auth.confirmToken);
 
 module.exports = router;

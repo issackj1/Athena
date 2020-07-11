@@ -14,13 +14,13 @@ const routes = require('./routes/routes');
 const whitelist = ['http://localhost:4000', 'http://localhost:3000', 'http://3.94.8.68', 'http://3.94.8.68/', '142.117.30.78'];
 const corsOptions = {
     origin: function (origin, callback) {
-        console.log(origin)
         if (!origin || whitelist.indexOf(origin) !== -1) {
             callback(null, true)
         } else {
             callback(new Error('Not allowed by CORS'))
         }
-    }
+    },
+    credentials: true
 };
 
 const app = express();
@@ -29,11 +29,9 @@ app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(process.env.EXPRESS_SESSION_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(utility_mw.body_parser_json);
-app.use(utility_mw.body_parser_url);
 app.use(utility_mw.session);
 
 app.use(auth_mw.hasUserSession);

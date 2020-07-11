@@ -5,13 +5,13 @@ const { ExtractJwt } = require('passport-jwt');
 
 const User = require('../models/user');
 
-const JWT_SECRET = require('../helpers/JwtSecret').JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Jwt Strategy
 passport.use(
     new JwtStrategy(
         {
-            jwtFromRequest: ExtractJwt.fromHeader('authorization'),
+            jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
             secretOrKey: JWT_SECRET
         },
         (payload, done) => {
@@ -20,7 +20,7 @@ passport.use(
                     if (!user) {
                         return done(null, false);
                     }
-                    done(null, user);
+                    return done(null, user);
                 })
                 .catch(err => {
                     return done(err, false);
@@ -59,3 +59,15 @@ passport.use(
         }
     )
 );
+
+passport.serializeUser((user, cb) => {
+    cb(null, user.id);
+});
+passport.deserializeUser((id, cb) => {
+    User.findOne({ _id: id }, (err, user) => {
+        const userInformation = {
+            username: user.username,
+        };
+        cb(err, userInformation);
+    });
+});

@@ -4,7 +4,7 @@ require('mongoose');
 const Jwt = require('jsonwebtoken'),
     RegManager = require('./data/Registration'),
     User = require('../models/user'),
-    { JWT_SECRET } = require("../helpers/JwtSecret");
+    JWT_SECRET = process.env.JWT_SECRET;
 
 let SignToken = user => {
     return Jwt.sign(
@@ -19,7 +19,7 @@ let SignToken = user => {
 };
 
 module.exports.login = (req, res, next) => {
-    res.status(200).json({ token: SignToken(req.user) });
+    res.status(200).json({ token: "Bearer " + SignToken(req.user) });
 };
 
 module.exports.register = (req, res, next) => {
@@ -50,5 +50,5 @@ module.exports.register = (req, res, next) => {
 
 module.exports.confirmToken = (req, res, next) => {
     const token = req.body.token || req.params.token;
-    res.status(200).json({status: "Authenticated"});
+    res.status(200).json({ success: true });
 };
