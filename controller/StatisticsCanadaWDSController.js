@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-module.exports.getCubeMetaData = (req, res, next) => {
+module.exports.getCubeMetaData = ( req, res, next ) => {
     axios({
         method: 'post',
         url: 'https://statcan-web-data-service-statcan.api.canada.ca/v1/getCubeMetadata',
@@ -17,12 +17,12 @@ module.exports.getCubeMetaData = (req, res, next) => {
         ]
     })
         .then(
-            (result) => {
+            ( result ) => {
                 res
                     .status(result.status)
-                    .send(result.data);
+                    .send(result.data[0]);
             },
-            (error) => {
+            ( error ) => {
                 res
                     .status(error.response.status)
                     .send(error.response.data)
@@ -30,7 +30,7 @@ module.exports.getCubeMetaData = (req, res, next) => {
         );
 };
 
-module.exports.getDataFromVectorsAndLatestNPeriods = (req, res, next) => {
+module.exports.getDataFromVectorsAndLatestNPeriods = ( req, res, next ) => {
     axios({
         method: 'post',
         url: 'https://statcan-web-data-service-statcan.api.canada.ca/v1/getDataFromVectorsAndLatestNPeriods',
@@ -48,12 +48,12 @@ module.exports.getDataFromVectorsAndLatestNPeriods = (req, res, next) => {
         ]
     })
         .then(
-            (result) => {
+            ( result ) => {
                 res
                     .status(result.status)
                     .send(result.data);
             },
-            (error) => {
+            ( error ) => {
                 res
                     .status(error.response.status)
                     .send(error.response.data)
@@ -62,7 +62,7 @@ module.exports.getDataFromVectorsAndLatestNPeriods = (req, res, next) => {
 
 };
 
-module.exports.getDataFromCubePidCoordAndLatestNPeriods = (req, res, next) => {
+module.exports.getDataFromCubePidCoordAndLatestNPeriods = ( req, res, next ) => {
     axios({
         method: 'post',
         url: 'https://statcan-web-data-service-statcan.api.canada.ca/v1/getDataFromCubePidCoordAndLatestNPeriods',
@@ -81,12 +81,12 @@ module.exports.getDataFromCubePidCoordAndLatestNPeriods = (req, res, next) => {
         ]
     })
         .then(
-            (result) => {
+            ( result ) => {
                 res
                     .status(result.status)
                     .send(result.data);
             },
-            (error) => {
+            ( error ) => {
                 res
                     .status(error.response.status)
                     .send(error.response.data)
@@ -94,7 +94,7 @@ module.exports.getDataFromCubePidCoordAndLatestNPeriods = (req, res, next) => {
         );
 };
 
-module.exports.getChangedSeriesDataFromVector = (req, res, next) => {
+module.exports.getChangedSeriesDataFromVector = ( req, res, next ) => {
     axios({
         method: 'post',
         url: 'https://statcan-web-data-service-statcan.api.canada.ca/v1/getChangedSeriesDataFromVector',
@@ -111,12 +111,12 @@ module.exports.getChangedSeriesDataFromVector = (req, res, next) => {
         ]
     })
         .then(
-            (result) => {
+            ( result ) => {
                 res
                     .status(result.status)
                     .send(result.data);
             },
-            (error) => {
+            ( error ) => {
                 res
                     .status(error.response.status)
                     .send(error.response.data)
