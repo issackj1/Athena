@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../athena-ui/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../athena-ui/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +42,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/../athena-ui/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/../athena-ui/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -140,7 +142,7 @@
       <workItem from="1620541197649" duration="877000" />
       <workItem from="1620765296667" duration="19000" />
       <workItem from="1620851237056" duration="990000" />
-      <workItem from="1620890034366" duration="801000" />
+      <workItem from="1620890034366" duration="1296000" />
     </task>
     <servers />
   </component>
