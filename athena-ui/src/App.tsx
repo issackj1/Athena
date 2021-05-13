@@ -22,8 +22,7 @@ export default function App() {
 	const classes = useStyles();
 
 	return (
-		<Container component="main">
-			<div className={ classes.paper }>
+		<Container className={ classes.paper }>
 				<Grid>
 					<Router basename={ process.env.PUBLIC_URL }>
 						<Grid item>
@@ -37,7 +36,6 @@ export default function App() {
 						</Switch>
 					</Router>
 				</Grid>
-			</div>
 			<Box mt={ 8 }>
 				<Copyright/>
 			</Box>

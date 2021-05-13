@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/AthenaNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/AthenaNavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/PrivateRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/forms/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/forms/SignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/forms/SignUpForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210422_0000" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.20.10" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -39,6 +43,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/../athena-ui/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -47,7 +53,17 @@
       <recent name="$PROJECT_DIR$/../athena-ui/src/components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start-athena-ui">
+  <component name="RunManager" selected="Compound.FE/BE">
+    <configuration name="FE/BE" type="CompoundRunConfigurationType">
+      <toRun name="start-athena-ui" type="js.build_tools.npm" />
+      <toRun name="start:dev" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="start-athena-ui" type="js.build_tools.npm" />
+      <toRun name="start:dev" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/../athena-ui/package.json" />
       <command value="run" />
@@ -58,7 +74,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start-athena-ui" type="js.build_tools.npm" temporary="true">
+    <configuration name="start-athena-ui" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/../athena-ui/package.json" />
       <command value="run" />
       <scripts>
@@ -68,7 +84,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start-athena" type="js.build_tools.npm" temporary="true">
+    <configuration name="start-athena" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -78,7 +94,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -89,17 +105,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.build" />
+      <item itemvalue="Compound.FE/BE" />
       <item itemvalue="npm.start-athena" />
-      <item itemvalue="npm.start-athena-ui" />
       <item itemvalue="npm.start:dev" />
+      <item itemvalue="npm.start-athena-ui" />
+      <item itemvalue="npm.build" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:dev" />
-        <item itemvalue="npm.start-athena-ui" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.start-athena" />
       </list>
     </recent_temporary>
   </component>
@@ -113,49 +127,30 @@
       <updated>1610160589715</updated>
       <workItem from="1610160590758" duration="2188000" />
       <workItem from="1610221703636" duration="695000" />
-      <workItem from="1610253138912" duration="2917000" />
+      <workItem from="1610253138912" duration="3014000" />
+      <workItem from="1612590137400" duration="17000" />
+      <workItem from="1619077210242" duration="458000" />
+      <workItem from="1619403817145" duration="401000" />
+      <workItem from="1619404494694" duration="37000" />
+      <workItem from="1619409054249" duration="1790000" />
+      <workItem from="1619415244518" duration="1078000" />
+      <workItem from="1619457477583" duration="1163000" />
+      <workItem from="1619587867542" duration="12000" />
+      <workItem from="1620091248567" duration="460000" />
+      <workItem from="1620147719215" duration="244000" />
+      <workItem from="1620185718345" duration="833000" />
+      <workItem from="1620541197649" duration="877000" />
+      <workItem from="1620765296667" duration="19000" />
+      <workItem from="1620851237056" duration="990000" />
+      <workItem from="1620890034366" duration="739000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="744" y="379" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610161393150">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="744" y="379" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610161393150" />
-    <state width="2539" height="424" key="GridCell.Tab.0.bottom" timestamp="1610253502784">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2539" height="424" key="GridCell.Tab.0.bottom/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610253502784" />
-    <state width="2539" height="424" key="GridCell.Tab.0.bottom/-1440.565.1440.875/0.0.2560.1440@0.0.2560.1440" timestamp="1610222404849" />
-    <state width="2539" height="424" key="GridCell.Tab.0.bottom/-1440.565.1440.875/0.25.2560.1323@0.25.2560.1323" timestamp="1610221620612" />
-    <state width="2539" height="424" key="GridCell.Tab.0.center" timestamp="1610253502782">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2539" height="424" key="GridCell.Tab.0.center/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610253502782" />
-    <state width="2539" height="424" key="GridCell.Tab.0.center/-1440.565.1440.875/0.0.2560.1440@0.0.2560.1440" timestamp="1610222404847" />
-    <state width="2539" height="424" key="GridCell.Tab.0.center/-1440.565.1440.875/0.25.2560.1323@0.25.2560.1323" timestamp="1610221620611" />
-    <state width="2539" height="424" key="GridCell.Tab.0.left" timestamp="1610253502781">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2539" height="424" key="GridCell.Tab.0.left/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610253502781" />
-    <state width="2539" height="424" key="GridCell.Tab.0.left/-1440.565.1440.875/0.0.2560.1440@0.0.2560.1440" timestamp="1610222404847" />
-    <state width="2539" height="424" key="GridCell.Tab.0.left/-1440.565.1440.875/0.25.2560.1323@0.25.2560.1323" timestamp="1610221620611" />
-    <state width="2539" height="424" key="GridCell.Tab.0.right" timestamp="1610253502783">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2539" height="424" key="GridCell.Tab.0.right/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610253502783" />
-    <state width="2539" height="424" key="GridCell.Tab.0.right/-1440.565.1440.875/0.0.2560.1440@0.0.2560.1440" timestamp="1610222404848" />
-    <state width="2539" height="424" key="GridCell.Tab.0.right/-1440.565.1440.875/0.25.2560.1323@0.25.2560.1323" timestamp="1610221620611" />
-    <state x="979" y="475" width="602" height="490" key="find.popup" timestamp="1610255750276">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="979" y="475" width="602" height="490" key="find.popup/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610255750276" />
-    <state x="945" y="331" key="search.everywhere.popup" timestamp="1610253709193">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="945" y="331" key="search.everywhere.popup/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1610253709193" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
