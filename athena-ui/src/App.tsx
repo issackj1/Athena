@@ -12,8 +12,10 @@ import axios from "axios";
 
 export default function App() {
   const [auth, setAuth] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const confirmLoggedIn = async () => {
       const res = await axios.post(
         "/api/confirm-token",
@@ -24,11 +26,11 @@ export default function App() {
           },
         }
       );
-
       if (res.status === 200) setAuth(true);
     };
 
     confirmLoggedIn();
+    setLoading(false);
   }, [auth]);
 
   const logout = () => {
@@ -39,6 +41,8 @@ export default function App() {
   const login = () => {
     setAuth(true);
   };
+
+  if (loading) return <h1>Loading</h1>;
 
   return (
     <>
@@ -54,9 +58,14 @@ export default function App() {
           <PrivateRoute
             path={"/:name/detail/:productId"}
             component={TableDetail}
+            auth={auth}
           />
-          <PrivateRoute path={"/athena/:name"} component={Endpoint} />
-          <PrivateRoute path={"/"} component={Welcome} />
+          <PrivateRoute
+            path={"/athena/:name"}
+            component={Endpoint}
+            auth={auth}
+          />
+          <PrivateRoute path={"/"} component={Welcome} auth={auth} />
         </Switch>
       </Router>
       <Box mt={8}>

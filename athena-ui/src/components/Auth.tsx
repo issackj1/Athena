@@ -48,7 +48,6 @@ export const Auth: React.FC<Props> = (props) => {
         (result: any) => {
           localStorage.setItem("my-jwt", result.data.token);
           history.push("/");
-          console.log(login);
           login();
         },
         (error: any) => {
