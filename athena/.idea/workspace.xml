@@ -4,8 +4,11 @@
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/AthenaNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1moWnOoHUbUx2eKfeC5iW15xwpP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -142,7 +153,8 @@
       <workItem from="1620541197649" duration="877000" />
       <workItem from="1620765296667" duration="19000" />
       <workItem from="1620851237056" duration="990000" />
-      <workItem from="1620890034366" duration="1296000" />
+      <workItem from="1620890034366" duration="5501000" />
+      <workItem from="1620948295173" duration="194000" />
     </task>
     <servers />
   </component>

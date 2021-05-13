@@ -16,24 +16,27 @@ import {
 
 const axios = require("axios");
 
-interface Props {}
+interface Props {
+  auth: boolean;
+  login: () => void;
+}
 
 function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-export const Auth: React.FC<Props> = () => {
+export const Auth: React.FC<Props> = (props) => {
   const [show, setShow] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
+  const { auth, login } = props;
   const history = useHistory();
-  const authenticated = !!localStorage.getItem("my-jwt");
 
   useEffect(() => {
-    if (authenticated) {
+    if (auth) {
       history.push("/");
     }
-  }, [authenticated, history]);
+  }, [auth, history]);
 
   const handleLogIn = async (email: String, password: String) => {
     await axios
@@ -45,6 +48,8 @@ export const Auth: React.FC<Props> = () => {
         (result: any) => {
           localStorage.setItem("my-jwt", result.data.token);
           history.push("/");
+          console.log(login);
+          login();
         },
         (error: any) => {
           setToastMessage("Incorrect email or password");
@@ -64,6 +69,7 @@ export const Auth: React.FC<Props> = () => {
         (result: any) => {
           localStorage.setItem("my-jwt", result.data.token);
           history.push("/");
+          login();
         },
         (error: any) => {
           setToastMessage("Email is already in use");

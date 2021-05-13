@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
@@ -11,7 +11,10 @@ import {
 import { useHistory } from "react-router-dom";
 import { ExitToApp } from "@material-ui/icons";
 
-interface Props {}
+interface Props {
+  auth: boolean;
+  logout: () => void;
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,12 +30,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const AthenaNavBar: React.FC<Props> = () => {
+export const NavBar: React.FC<Props> = (props) => {
   const classes = useStyles();
   const history = useHistory();
+  const { logout, auth } = props;
 
   const handleLogout = () => {
-    localStorage.removeItem("my-jwt");
+    logout();
     history.push("/");
   };
 
@@ -45,16 +49,15 @@ export const AthenaNavBar: React.FC<Props> = () => {
               Issack John
             </Link>
           </Typography>
-          {history.location.pathname !== "/auth" ? (
+          {auth && (
             <Button
-              variant="contained"
-              color="primary"
+              color="inherit"
               startIcon={<SvgIcon component={ExitToApp} />}
               onClick={handleLogout}
             >
               Logout
             </Button>
-          ) : null}
+          )}
         </Toolbar>
       </AppBar>
     </div>
