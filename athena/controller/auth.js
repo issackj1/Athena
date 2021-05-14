@@ -18,11 +18,11 @@ let SignToken = (user) => {
   );
 };
 
-module.exports.login = (req, res, next) => {
+module.exports.login = (req, res) => {
   res.status(200).json({ token: "Bearer " + SignToken(req.user) });
 };
 
-module.exports.register = (req, res, next) => {
+module.exports.register = (req, res) => {
   const { email, accountType = "user" } = req.body;
   User.findOne({ email })
     .then((user) => {
