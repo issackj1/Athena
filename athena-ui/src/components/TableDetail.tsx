@@ -21,9 +21,7 @@ export const TableDetail: React.FC<Props> = (props: Props) => {
       (result: any) => {
         return JSON.stringify(data);
       },
-      (error: any) => {
-        console.log(error);
-      }
+      (error: any) => {}
     );
     setIsLoading(false);
   }, [productId]);

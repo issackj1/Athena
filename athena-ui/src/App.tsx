@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     setLoading(true);
     const confirmLoggedIn = async () => {
-      const res = await axios.post(
+      const { status } = await axios.post(
         "/api/confirm-token",
         {},
         {
@@ -26,10 +26,10 @@ export default function App() {
           },
         }
       );
-      if (res.status === 200) setAuth(true);
+      setAuth(status === 200);
     };
 
-    confirmLoggedIn();
+    confirmLoggedIn().catch((err) => err);
     setLoading(false);
   }, [auth]);
 
