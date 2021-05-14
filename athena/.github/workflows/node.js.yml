@@ -16,6 +16,7 @@ jobs:
 
     strategy:
       matrix:
+        directories: [athena-ui]
         node-version: [10.x, 12.x, 14.x]
 
     steps:
@@ -25,5 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+      working-directory: ${{ matrix.directories}}
     - run: npm run build --if-present
+      working-directory: ${{ matrix.directories}}
     - run: npm test
+      working-directory: ${{ matrix.directories}}

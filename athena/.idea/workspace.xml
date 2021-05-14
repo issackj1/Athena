@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/label.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/node.js.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/node.js.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +148,7 @@
       <workItem from="1620765296667" duration="19000" />
       <workItem from="1620851237056" duration="990000" />
       <workItem from="1620890034366" duration="5501000" />
-      <workItem from="1620948295173" duration="3563000" />
+      <workItem from="1620948295173" duration="3774000" />
     </task>
     <servers />
   </component>
