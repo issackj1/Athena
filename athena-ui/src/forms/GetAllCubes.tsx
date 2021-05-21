@@ -21,29 +21,39 @@ export const GetAllCubes: React.FC<Props> = (props) => {
 
   const handleSubmit = async (id: string) => {
     setIsLoading(true);
-    await axios.post("/api/v1/getCubeMetaData/" + id).then(
-      (result: any) => {
-        if (result.data.status === "FAILED") {
-          setResponse(result.data.object.split(".")[0]);
-        } else {
-          for (let i = 0; i < result.data.length; i++) {
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-            !response.some(
-              (e) => e.object.productId === result.data.object.productId
-            )
-              ? setResponse((prevState) => ({
-                  ...prevState,
-                  ...result.data[i],
-                }))
-              : [setToastMessage("Item already exists"), setShow(true)];
-          }
+    await axios
+      .post(
+        "/api/v1/getCubeMetaData/" + id,
+        {},
+        {
+          headers: {
+            Authorization: localStorage.getItem("my-jwt"),
+          },
         }
-      },
-      (error: { message: any }) => {
-        setToastMessage(error.message);
-        setShow(true);
-      }
-    );
+      )
+      .then(
+        (result: any) => {
+          if (result.data.status === "FAILED") {
+            setResponse(result.data.object.split(".")[0]);
+          } else {
+            for (let i = 0; i < result.data.length; i++) {
+              // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+              !response.some(
+                (e) => e.object.productId === result.data.object.productId
+              )
+                ? setResponse((prevState) => ({
+                    ...prevState,
+                    ...result.data[i],
+                  }))
+                : [setToastMessage("Item already exists"), setShow(true)];
+            }
+          }
+        },
+        (error: { message: any }) => {
+          setToastMessage(error.message);
+          setShow(true);
+        }
+      );
     setIsLoading(false);
   };
 
