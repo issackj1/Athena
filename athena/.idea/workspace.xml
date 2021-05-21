@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/node.js.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/node.js.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -19,6 +30,16 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.github/workflows/node.js.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Copyright.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/routes/auth.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1moWnOoHUbUx2eKfeC5iW15xwpP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -149,6 +170,7 @@
       <workItem from="1620851237056" duration="990000" />
       <workItem from="1620890034366" duration="5501000" />
       <workItem from="1620948295173" duration="3774000" />
+      <workItem from="1621560958944" duration="1252000" />
     </task>
     <servers />
   </component>
