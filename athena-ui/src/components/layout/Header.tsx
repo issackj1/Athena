@@ -1,5 +1,5 @@
+// @ts-nocheck
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Button,
@@ -9,9 +9,9 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
 import { ExitToApp } from "@material-ui/icons";
-
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 interface Props {
   auth: boolean;
   logout: () => void;
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const NavBar: React.FC<Props> = (props) => {
+export const Header = (props) => {
   const classes = useStyles();
   const history = useHistory();
   const { logout, auth } = props;
@@ -38,25 +38,26 @@ export const NavBar: React.FC<Props> = (props) => {
     logout();
     history.push("/");
   };
-
   return (
     <div className={classes.root}>
       <AppBar position={"static"}>
         <Toolbar variant={"dense"}>
-          <Typography variant="h6" className={classes.title}>
-            <Link underline={"none"} color={"inherit"} href={"/"}>
-              Issack John's API's
-            </Link>
-          </Typography>
-          {auth && (
-            <Button
-              color="inherit"
-              startIcon={<SvgIcon component={ExitToApp} />}
-              onClick={handleLogout}
-            >
-              Logout
-            </Button>
-          )}
+          <Container>
+            <Typography variant="h6" className={classes.title}>
+              <Link underline={"none"} color={"inherit"} href={"/"}>
+                Issack John
+              </Link>
+            </Typography>
+            {auth && (
+              <Button
+                color="inherit"
+                startIcon={<SvgIcon component={ExitToApp} />}
+                onClick={handleLogout}
+              >
+                Logout
+              </Button>
+            )}
+          </Container>
         </Toolbar>
       </AppBar>
     </div>

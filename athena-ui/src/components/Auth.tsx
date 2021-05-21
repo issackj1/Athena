@@ -5,11 +5,9 @@ import { LoginForm } from "../forms/LoginForm";
 import { SignUpForm } from "../forms/SignUpForm";
 import { useHistory } from "react-router-dom";
 import {
-  Box,
   Card,
   CardContent,
   CardHeader,
-  Container,
   Grid,
   Snackbar,
 } from "@material-ui/core";
@@ -104,34 +102,30 @@ export const Auth: React.FC<Props> = (props) => {
   );
 
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Grid
-          container
-          direction={"column"}
-          justify="center"
-          alignItems="center"
-          spacing={2}
-        >
-          <Grid container item xs={12} sm={12}>
-            {toastMessage ? (
-              <Snackbar
-                onClose={() => setShow(false)}
-                show={show}
-                delay={3000}
-                autohide
-              >
-                <Alert severity={"error"}>
-                  <strong>{toastMessage}</strong>
-                </Alert>
-              </Snackbar>
-            ) : null}
-          </Grid>
-          <Grid container item xs={12} sm={12} direction={"column"}>
-            <Card>{isSignUp ? signUpHeaders() : logInHeaders()}</Card>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+    <Grid
+      container
+      direction={"column"}
+      justify="center"
+      alignItems="center"
+      spacing={2}
+    >
+      <Grid container item xs={12} sm={12}>
+        {toastMessage ? (
+          <Snackbar
+            onClose={() => setShow(false)}
+            show={show}
+            delay={3000}
+            autohide
+          >
+            <Alert severity={"error"}>
+              <strong>{toastMessage}</strong>
+            </Alert>
+          </Snackbar>
+        ) : null}
+      </Grid>
+      <Grid container item xs={12} sm={12} direction={"column"}>
+        <Card>{isSignUp ? signUpHeaders() : logInHeaders()}</Card>
+      </Grid>
+    </Grid>
   );
 };
