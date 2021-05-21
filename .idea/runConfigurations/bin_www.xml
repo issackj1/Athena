@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/../Athena/athena/bin/www" working-dir="$PROJECT_DIR$/../Athena">
     <envs>
       <env name="DEBUG" value="alpha-backend:*" />
       <env name="user_key" value="a88eac5164f5a3719a588151e6f2c3a5" />

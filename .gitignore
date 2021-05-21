@@ -1,3 +1,8 @@
 
-.env
-/node_modules/
+.idea/runConfigurations/bin_www.xml
+athena/.idea/workspace.xml
+*.xml
+*.xml
+*.xml
+athena/.idea/workspace.xml
+athena/.idea/workspace.xml
