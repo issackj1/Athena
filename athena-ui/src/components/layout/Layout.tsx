@@ -1,7 +1,7 @@
 import React from "react";
-import { Container } from "@material-ui/core";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Grid } from "@material-ui/core";
 
 interface Props {
   auth: boolean;
@@ -11,10 +11,14 @@ interface Props {
 
 export const Layout: React.FC<Props> = ({ auth, logout, children }) => {
   return (
-    <Container>
-      <Header auth={auth} logout={logout} />
-      {children}
-      <Footer />
-    </Container>
+    <Grid container direction={"column"} justify={"space-between"}>
+      <Grid item>
+        <Header auth={auth} logout={logout} />
+      </Grid>
+      <Grid item>{children}</Grid>
+      <Grid item>
+        <Footer />
+      </Grid>
+    </Grid>
   );
 };

@@ -1,22 +1,30 @@
-// @ts-nocheck
 import React from "react";
 import { Home } from "./Home";
-import { Box, Container, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 
 interface Props {}
 
-export const Welcome: React.FC<Props> = (props) => {
+export const Welcome: React.FC<Props> = () => {
   return (
-    <Box my={20}>
-      <Typography
-        color={"textPrimary"}
-        component={"h5"}
-        variant={"h2"}
-        align={"center"}
-      >
-        What would you like to do?
-      </Typography>
-      <Home />
-    </Box>
+    <Grid
+      container
+      direction={"column"}
+      justify={"space-around"}
+      alignItems={"center"}
+    >
+      <Grid item>
+        <Typography
+          color={"textPrimary"}
+          component={"h5"}
+          variant={"h2"}
+          align={"center"}
+        >
+          What would you like to do?
+        </Typography>
+      </Grid>
+      <Grid item>
+        <Home />
+      </Grid>
+    </Grid>
   );
 };

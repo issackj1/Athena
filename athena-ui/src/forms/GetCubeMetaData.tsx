@@ -59,104 +59,86 @@ export const GetCubeMetaData: React.FC<Props> = () => {
   };
 
   return (
-    <>
-      <Grid container direction={"column"} spacing={2}>
-        <Grid container item direction={"column"} xs={12}>
-          <Formik
-            initialValues={{ productId: "" }}
-            validationSchema={schema}
-            onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                handleSubmit(values.productId);
-                setSubmitting(false);
-              }, 400);
-            }}
-          >
-            {({ isSubmitting }) => (
-              <Form>
-                <Field
-                  component={TextField}
-                  name="productId"
-                  label={"Product Id"}
-                  variant="standard"
-                  InputProps={{ notched: true }}
-                />
-                <Button
-                  className={"mt-2 ml-1"}
-                  variant="contained"
-                  type="submit"
-                  color={"primary"}
-                  disabled={isSubmitting}
-                >
-                  Submit
-                </Button>
-              </Form>
-            )}
-          </Formik>
-        </Grid>
-        <Grid container item direction={"column"} xs={12}>
-          {toastMessage ? (
-            <Snackbar
-              className={"mx-auto"}
-              onClose={() => setShow(false)}
-              show={show}
-              delay={3000}
-              autohide
-            >
-              <Alert severity={"error"}>
-                <strong>{toastMessage}</strong>
-              </Alert>
-            </Snackbar>
-          ) : null}
-        </Grid>
-        <Grid container item xs={12} sm={12}>
-          {!isLoading && !_.isEmpty(response) ? (
-            <Card>
-              <CardActionArea
-                style={{ textDecoration: "none" }}
-                component={Link}
-                to={`/athena/${name}/detail/${response.productId}`}
+    <Grid container direction={"column"} spacing={2}>
+      <Grid container item direction={"column"} xs={12}>
+        <Formik
+          initialValues={{ productId: "" }}
+          validationSchema={schema}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              handleSubmit(values.productId);
+              setSubmitting(false);
+            }, 400);
+          }}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <Field
+                component={TextField}
+                name="productId"
+                label={"Product Id"}
+                variant="standard"
+                InputProps={{ notched: true }}
+              />
+              <Button
+                className={"mt-2 ml-1"}
+                variant="contained"
+                type="submit"
+                color={"primary"}
+                disabled={isSubmitting}
               >
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {response.cubeTitleEn}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Product ID: {response.productId}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Status: {response.archiveStatusEn}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {`From: ${response.cubeStartDate} to ${response.cubeEndDate}`}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    <small>Released: {response.releaseTime}</small>
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ) : (
-            <Conditional isLoading={isLoading} />
+                Submit
+              </Button>
+            </Form>
           )}
-        </Grid>
+        </Formik>
       </Grid>
-    </>
+      <Grid container item direction={"column"} xs={12}>
+        {toastMessage ? (
+          <Snackbar
+            className={"mx-auto"}
+            onClose={() => setShow(false)}
+            show={show}
+            delay={3000}
+            autohide
+          >
+            <Alert severity={"error"}>
+              <strong>{toastMessage}</strong>
+            </Alert>
+          </Snackbar>
+        ) : null}
+      </Grid>
+      <Grid container item xs={12} sm={12}>
+        {!isLoading && !_.isEmpty(response) ? (
+          <Card>
+            <CardActionArea
+              style={{ textDecoration: "none" }}
+              component={Link}
+              to={`/athena/${name}/detail/${response.productId}`}
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {response.cubeTitleEn}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Product ID: {response.productId}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Status: {response.archiveStatusEn}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {`From: ${response.cubeStartDate} to ${response.cubeEndDate}`}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  <small>Released: {response.releaseTime}</small>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        ) : (
+          <Conditional isLoading={isLoading} />
+        )}
+      </Grid>
+    </Grid>
   );
 };
