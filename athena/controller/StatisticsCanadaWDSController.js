@@ -1,7 +1,6 @@
 const axios = require("axios");
 
 module.exports.getCubeMetaData = (req, res, next) => {
-  console.log(req);
   axios({
     method: "post",
     url: "https://statcan-web-data-service-statcan.api.canada.ca/v1/getCubeMetadata",

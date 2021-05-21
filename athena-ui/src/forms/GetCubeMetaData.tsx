@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
 import { Conditional } from "../components/Conditional";
+import cachedAxios from "../config/axiosConfig";
 
 interface Props {}
 
@@ -42,20 +43,32 @@ export const GetCubeMetaData: React.FC<Props> = () => {
       return;
     }
     setIsLoading(true);
-    await axios.post("/api/v1/getCubeMetaData/" + id).then(
-      (result: any) => {
-        if (result.data.status === "FAILED") {
-          setResponse(result.data.object.split(".")[0]);
-        } else {
-          setResponse(result.data.object);
+    const api = await cachedAxios;
+    api
+      .post(
+        "/api/v1/getCubeMetaData/" + id,
+        {},
+        {
+          headers: {
+            Authorization: localStorage.getItem("my-jwt"),
+          },
         }
-      },
-      (error: { message: any }) => {
-        setToastMessage(error.message);
-        setShow(true);
-      }
-    );
-    setIsLoading(false);
+      )
+      .then(
+        (result: any) => {
+          if (result.data.status === "FAILED") {
+            setResponse(result.data.object.split(".")[0]);
+          } else {
+            setResponse(result.data.object);
+          }
+          setIsLoading(false);
+        },
+        (error: { message: any }) => {
+          setToastMessage(error.message);
+          setShow(true);
+          setIsLoading(false);
+        }
+      );
   };
 
   return (

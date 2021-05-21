@@ -3,11 +3,10 @@ import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { TextField } from "formik-material-ui";
-import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
+import cachedAxios from "../config/axiosConfig";
 
 interface Props {}
-
-const axios = require("axios");
 
 const schema = Yup.object({
   productId: Yup.number().required("Id must be 8 digits long"),
@@ -21,7 +20,8 @@ export const GetAllCubes: React.FC<Props> = (props) => {
 
   const handleSubmit = async (id: string) => {
     setIsLoading(true);
-    await axios
+    const api = await cachedAxios;
+    await api
       .post(
         "/api/v1/getCubeMetaData/" + id,
         {},
