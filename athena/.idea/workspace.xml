@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +168,7 @@
       <workItem from="1620851237056" duration="990000" />
       <workItem from="1620890034366" duration="5501000" />
       <workItem from="1620948295173" duration="3774000" />
-      <workItem from="1621560958944" duration="2947000" />
+      <workItem from="1621560958944" duration="3167000" />
     </task>
     <servers />
   </component>

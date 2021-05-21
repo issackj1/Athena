@@ -5,9 +5,6 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { TableDetail } from "./components/TableDetail";
 import { Endpoint } from "./components/Endpoint";
 import { Welcome } from "./components/Welcome";
-import { Box, Container } from "@material-ui/core";
-import { NavBar } from "./components/NavBar";
-import { Copyright } from "./components/Copyright";
 import axios from "axios";
 import { Layout } from "./components/layout/Layout";
 
