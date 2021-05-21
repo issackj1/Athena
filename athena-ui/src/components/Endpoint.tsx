@@ -34,17 +34,13 @@ export const Endpoint: React.FC<Props> = (props) => {
   const { title, form } = getProps(name);
 
   return (
-    <Container>
-      <Box my={20}>
-        <Grid direction={"row"}>
-          <Grid item xs={12} sm={12} md={4}>
-            <Typography align={"center"}>{title}</Typography>
-          </Grid>
-          <Grid item xs={12} sm={12} md={4}>
-            <Typography align={"center"}>{form}</Typography>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+    <Grid direction={"row"}>
+      <Grid item xs={12} sm={12} md={4}>
+        <Typography align={"center"}>{title}</Typography>
+      </Grid>
+      <Grid item xs={12} sm={12} md={4}>
+        <Typography align={"center"}>{form}</Typography>
+      </Grid>
+    </Grid>
   );
 };
