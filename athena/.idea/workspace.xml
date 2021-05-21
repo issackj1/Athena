@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d1eeac61-2282-42f8-8d18-a99374db1cf0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../athena-ui/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../athena-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Endpoint.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/layout/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/forms/GetAllCubes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/forms/GetAllCubes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../athena-ui/src/forms/GetCubeMetaData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../athena-ui/src/forms/GetCubeMetaData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,14 +38,22 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../athena-ui/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.github/workflows/node.js.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/TableDetail.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Copyright.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../athena-ui/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/auth.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/index.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.github/workflows/node.js.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/NavBar.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/layout/Layout.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/layout/Header.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Home.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/Auth.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../athena-ui/src/components/PrivateRoute.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1moWnOoHUbUx2eKfeC5iW15xwpP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -168,7 +184,7 @@
       <workItem from="1620851237056" duration="990000" />
       <workItem from="1620890034366" duration="5501000" />
       <workItem from="1620948295173" duration="3774000" />
-      <workItem from="1621560958944" duration="3167000" />
+      <workItem from="1621560958944" duration="6263000" />
     </task>
     <servers />
   </component>

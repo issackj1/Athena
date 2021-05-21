@@ -4,6 +4,7 @@ import {
   AppBar,
   Button,
   Container,
+  Grid,
   Link,
   SvgIcon,
   Toolbar,
@@ -41,22 +42,24 @@ export const Header = (props) => {
   return (
     <div className={classes.root}>
       <AppBar position={"static"}>
-        <Toolbar variant={"dense"}>
+        <Toolbar>
           <Container>
-            <Typography variant="h6" className={classes.title}>
-              <Link underline={"none"} color={"inherit"} href={"/"}>
-                Issack John
-              </Link>
-            </Typography>
-            {auth && (
-              <Button
-                color="inherit"
-                startIcon={<SvgIcon component={ExitToApp} />}
-                onClick={handleLogout}
-              >
-                Logout
-              </Button>
-            )}
+            <Grid container direction={"row"} alignItems={"center"}>
+              <Typography variant="h6" className={classes.title}>
+                <Link underline={"none"} color={"inherit"} href={"/"}>
+                  Issack John
+                </Link>
+              </Typography>
+              {auth && (
+                <Button
+                  color="inherit"
+                  startIcon={<SvgIcon component={ExitToApp} />}
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              )}
+            </Grid>
           </Container>
         </Toolbar>
       </AppBar>

@@ -7,6 +7,7 @@ import { Endpoint } from "./components/Endpoint";
 import { Welcome } from "./components/Welcome";
 import axios from "axios";
 import { Layout } from "./components/layout/Layout";
+import { Container, Grid } from "@material-ui/core";
 
 export default function App() {
   const [auth, setAuth] = useState(false);
@@ -44,27 +45,29 @@ export default function App() {
 
   return (
     <Layout auth={auth} logout={logout}>
-      <Router basename={process.env.PUBLIC_URL}>
-        <Switch>
-          <Route
-            path={"/auth"}
-            render={(props: any) => (
-              <Auth {...props} auth={auth} login={login} />
-            )}
-          />
-          <PrivateRoute
-            path={"/:name/detail/:productId"}
-            component={TableDetail}
-            auth={auth}
-          />
-          <PrivateRoute
-            path={"/athena/:name"}
-            component={Endpoint}
-            auth={auth}
-          />
-          <PrivateRoute path={"/"} component={Welcome} auth={auth} />
-        </Switch>
-      </Router>
+      <Container>
+        <Router basename={process.env.PUBLIC_URL}>
+          <Switch>
+            <Route
+              path={"/auth"}
+              render={(props: any) => (
+                <Auth {...props} auth={auth} login={login} />
+              )}
+            />
+            <PrivateRoute
+              path={"/:name/detail/:productId"}
+              component={TableDetail}
+              auth={auth}
+            />
+            <PrivateRoute
+              path={"/athena/:name"}
+              component={Endpoint}
+              auth={auth}
+            />
+            <PrivateRoute path={"/"} component={Welcome} auth={auth} />
+          </Switch>
+        </Router>
+      </Container>
     </Layout>
   );
 }

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { TextField } from "formik-material-ui";
-import { Button, Grid, Typography } from "@material-ui/core";
+import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 
 interface Props {}
 
@@ -17,7 +17,7 @@ export const GetAllCubes: React.FC<Props> = (props) => {
   const [response, setResponse] = useState([]);
   const [toastMessage, setToastMessage] = useState("");
   const [show, setShow] = useState(false);
-  const [setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (id: string) => {
     setIsLoading(true);
@@ -48,14 +48,22 @@ export const GetAllCubes: React.FC<Props> = (props) => {
   };
 
   return (
-    <Grid container direction={"column"} spacing={1}>
-      <Grid container item xs={12}>
-        <Typography variant={"body1"} align={"center"}>
-          {show ? toastMessage : null}
-          {response}
-        </Typography>
+    <Grid
+      container
+      direction={"column"}
+      alignItems={"center"}
+      justify={"center"}
+      spacing={10}
+    >
+      <Grid item xs={12} sm={12}>
+        {!isLoading && (
+          <Typography variant={"body1"} align={"center"}>
+            {show ? toastMessage : null}
+            {response}
+          </Typography>
+        )}
       </Grid>
-      <Grid container item xs={12} sm={12}>
+      <Grid item xs={12} sm={12}>
         <Formik
           initialValues={{ productId: "" }}
           validationSchema={schema}
@@ -68,22 +76,28 @@ export const GetAllCubes: React.FC<Props> = (props) => {
         >
           {({ isSubmitting }) => (
             <Form>
-              <Field
-                component={TextField}
-                name="productId"
-                label={"Product Id"}
-                variant="standard"
-                InputProps={{ notched: true }}
-              />
-              <Button
-                className={"mt-2 ml-1"}
-                variant="contained"
-                type="submit"
-                color={"primary"}
-                disabled={isSubmitting}
-              >
-                Submit
-              </Button>
+              <Grid container justify={"space-evenly"} alignItems={"center"}>
+                <Grid item>
+                  <Field
+                    component={TextField}
+                    name="productId"
+                    label={"Product Id"}
+                    variant="standard"
+                    InputProps={{ notched: true }}
+                  />
+                </Grid>
+                <Grid item>
+                  <Button
+                    className={"mt-2 ml-1"}
+                    variant="contained"
+                    type="submit"
+                    color={"primary"}
+                    disabled={isSubmitting}
+                  >
+                    Submit
+                  </Button>
+                </Grid>
+              </Grid>
             </Form>
           )}
         </Formik>
