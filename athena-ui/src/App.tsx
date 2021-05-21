@@ -5,10 +5,11 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { TableDetail } from "./components/TableDetail";
 import { Endpoint } from "./components/Endpoint";
 import { Welcome } from "./components/Welcome";
-import { Box } from "@material-ui/core";
+import { Box, Container } from "@material-ui/core";
 import { NavBar } from "./components/NavBar";
 import { Copyright } from "./components/Copyright";
 import axios from "axios";
+import Layout from "./components/layout/Layout";
 
 export default function App() {
   const [auth, setAuth] = useState(false);
@@ -45,7 +46,7 @@ export default function App() {
   if (loading) return <h1>Loading</h1>;
 
   return (
-    <>
+    <Layout>
       <Router basename={process.env.PUBLIC_URL}>
         <NavBar auth={auth} logout={logout} />
         <Switch>
@@ -71,6 +72,6 @@ export default function App() {
       <Box mt={8}>
         <Copyright />
       </Box>
-    </>
+    </Layout>
   );
 }
